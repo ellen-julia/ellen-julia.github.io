@@ -27,14 +27,16 @@ h2 {
 	margin: 0;
 }
 
-h3,h4,h5,h6 {
+h3,h4,h5{
 	margin: 3em 0;
-	letter-spacing: 0.2em;
+	letter-spacing: 0.5em;
 	text-transform: uppercase;
 }
 
 h6 {
-	color: #ff823e;
+	font-weight: normal;
+	text-transform: uppercase;
+	color: #98c5d4;
 }
 
 .x {
@@ -71,7 +73,7 @@ section {
 }
 
 .btn {
-	font-family: "Open Sans", sans-serif;
+	font-family: "Arimo", sans-serif;
 	letter-spacing: 0.3em;
 	text-transform: uppercase;
 }
@@ -190,14 +192,14 @@ section {
 
 .heading span {
 	border: 0;
-	border-top: 1px solid #ff823e;
+	border-top: 1px solid #98c5d4;
 	display: inline-block;
 	margin: 5px 10px;
 	width: 40px;
 }
 
 .heading i {
-	color: #ff823e;
+	color: #98c5d4;
 }
 
 /* MAIN BANNER
@@ -213,7 +215,7 @@ section {
 }
 
 .hover-effect span {
-	background: #ff823e;
+	background: #98c5d4;
 	color: #fff;
 	display: block;
 	height: 0;
@@ -302,8 +304,8 @@ section {
 }
 
 .social-icons a:hover {
-	border: 1px solid #ff823e;
-	color: #ff823e;
+	border: 1px solid #98c5d4;
+	color: #98c5d4;
 }
 
 /* PEOPLE & ACCOMMODATION
@@ -361,7 +363,7 @@ section {
 }
 
 .post-header span {
-	color: #ff823e;
+	color: #98c5d4;
 }
 
 .post-meta {
@@ -431,7 +433,7 @@ section {
 }
 
 #facts .img-circle {
-	background: #ff823e;
+	background: #98c5d4;
 	height: 213px;
 	padding-top: 60px;
 }
@@ -485,7 +487,7 @@ section {
 }
 
 #rsvp .btn {
-	background: #ffde25;
+	background: #4eb2d4;
 	color: #222;
 	margin-top: 20px;
 	padding-bottom: 20px;

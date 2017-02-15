@@ -95,9 +95,9 @@
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#events">Events</a></li>
-						<li><a href="#accommodation">Accommodation</a></li>
+						<li><a href="#wedding">The Wedding</a></li>
 						<li><a href="#location">Location</a></li>
+						<li><a href="#accommodation">Accommodation</a></li>
 						<li><a href="#falmouth">Around Falmouth</a></li>
 						<li><a href="#rsvp">RSVP</a></li>
 						<li><a href="#registry">Gifts</a></li>
@@ -108,13 +108,13 @@
 
 		<!-- ========== MENU END ========== -->
 
-		<!-- ========== EVENTS START ========== -->
+		<!-- ========== WEDDING START ========== -->
 
-		<section id="events">
+		<section id="wedding">
 			<div class="container text-center">
 				<div class="row">
 					<div class="col-sm-12 heading" data-scroll-reveal>
-						<h2>Events &amp; Parties</h2>
+						<h2>The Wedding</h2>
 						<p><span></span><i class="fa fa-heart"></i><span></span></p>
 					</div>
 				</div>
@@ -122,19 +122,20 @@
 					<div class="col-sm-6">
 						<div class="blog-short">
                                                   <img src="images/spohr.jpg" class="img-responsive" alt="" />
-							<h5>Wedding Ceremony</h5>
+							<h5>Ceremony</h5>
                                                         <h6>September 9th, 2017
 																												<br/>10:00 AM</h6>
                                                         <p><a href="http://www.spohrgardens.org/">Spohr Garden</a></p>
                                                         <p>45 Fells Rd,
                                                         <br/>Falmouth, MA</p>
-                                                        <p>Ceremony will be standing. Please arrive before 10 AM.</p>
+                                                        <p>Ceremony will be standing.
+																												</br>Please arrive before 10 AM.</p>
 						</div>
 					</div>
 					<div class="col-sm-6">
 						<div class="blog-short">
                                                   <img src="images/osteria_day.jpg" class="img-responsive" alt="" />
-              <h5>Wedding Reception</h5>
+              <h5>Reception</h5>
                                                         <h6>September 9th, 2017
                                                         <br/>11:00 AM - 3:00 PM</h6>
                                                         <p><a href="http://www.osterialacivetta.com/">Osteria la Civetta</a></p>
@@ -147,7 +148,106 @@
 			</div>
 		</section>
 
-		<!-- ========== EVENTS END ========== -->
+		<!-- ========== WEDDING END ========== -->
+
+		<!-- ========== LOCATION START ========== -->
+		<section id="location">
+
+
+						<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoRMxiPsqJ9SUuaK1KsCAjd3gqnecjlBw&amp;sensor=true"></script>
+						<script type="text/javascript">
+
+										function initialize() {
+
+														// Create an array of styles.
+														var styles = [
+															{
+																"stylers": [
+																	{ "saturation": -100 },
+																	{ "gamma": 1 }
+																]
+															},{
+																"featureType": "water",
+																"stylers": [
+																	{ "lightness": -12 }
+																]
+															}
+														];
+
+														// Create a new StyledMapType object, passing it the array of styles,
+														// as well as the name to be displayed on the map type control.
+														var styledMap = new google.maps.StyledMapType(styles,
+														{name: "Styled Map"});
+
+
+																										var mapOptions = {
+																														scrollwheel: false,
+																														zoom: 14,
+																														center:
+																															new
+																															google.maps.LatLng(41.548, -70.63),
+														mapTypeControlOptions: {
+															mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+														}
+														}
+														var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+														//Associate the styled map with the MapTypeId and set it to display.
+														map.mapTypes.set('map_style', styledMap);
+														map.setMapTypeId('map_style');
+
+														setMarkers(map, weddingplaces,'images/map-marker.png' );
+										}
+
+
+
+										var weddingplaces = [
+														['Spohr Garden.', 41.5426456, -70.644417, 20],
+														['Osteria la Civetta', 41.552931, -70.6200862,20],
+														['Signell House', 41.5490484, -70.6108836, 20]
+										];
+
+										function setMarkers(map, locations, markerpic) {
+														// Add markers to the map
+														var image = {
+																		url: markerpic,
+																		// This marker is 42 pixels wide by 68 pixels tall.
+																		size: new google.maps.Size(21,34),
+																		// The origin for this image is 0,0.
+																		//origin: new google.maps.Point(0,0),
+																		origin: null,
+																		// The anchor for this image is the base of the pin at 20,42.
+																		//anchor: new google.maps.Point(20, 42)
+																		anchor: null
+														};
+
+														for (var i = 0; i < locations.length; i++) {
+																		var place = locations[i];
+																		var myLatLng = new google.maps.LatLng(place[1], place[2]);
+																		var marker = new google.maps.Marker({
+																						position: myLatLng,
+																						map: map,
+																						icon: image,
+																						title: place[0],
+																						zIndex: place[3],
+																						animation: google.maps.Animation.DROP
+																		});
+
+																		var contentString = "Some content";
+																		google.maps.event.addListener(marker, "click", function() {
+																						infowindow.setContent(this.html);
+																						infowindow.open(map, this);
+																		});
+														}
+										}
+
+										google.maps.event.addDomListener(window, 'load', initialize);
+						</script>
+
+						<!-- <a href="https://drive.google.com/open?id=1eWpPrBMdUVmZ1uk-pEY_3Ps0_OE&usp=sharing"> -->
+						<div id="map-canvas"></div>
+					</a>
+		<!-- ========== LOCATION END ========== -->
 
 		<!-- ========== ACOOMMODATION START ========== -->
 
@@ -177,7 +277,7 @@
 
 					<div class="col-sm-3" data-scroll-reveal="enter from the left after 0.25s">
 																					<a href="http://www.shorewayacresinn.com/index.htm" class="hover-effect">
-							<img src="http://www.shorewayacresinn.com/images/sub-img-1.jpg" class="img-responsive img-circle" alt="" />
+							<img src="images/shoreway_acres.jpg" class="img-responsive img-circle" alt="" />
 							<span class="img-circle">
 																													<i class="http://www.shorewayacresinn.com/index.htm"></i>
 							</span>
@@ -238,7 +338,7 @@
 
 					<div class="col-sm-3" data-scroll-reveal="enter from the right after 0.5s">
                                           <a href="https://www.airbnb.com/s/Falmouth--MA--United-States?adults=1&checkin=09%2F08%2F2017&checkout=09%2F10%2F2017&children=0&guests=1&infants=0&place_id=ChIJ82Dog8rQ5IkRNGG2NHdkgbU&source=bb&ss_id=pd2h9156&page=1&allow_override%5B%5D=&ne_lat=41.57063792661364&ne_lng=-70.5997121006356&sw_lat=41.48254320301334&sw_lng=-70.67747470439537&zoom=13&search_by_map=true&s_tag=goRF8rRA" class="hover-effect">
-							<img src="https://cdn.worldvectorlogo.com/logos/airbnb-2.svg" class="img-responsive img-circle" alt=""/>
+							<img src="https://cdn.worldvectorlogo.com/logos/airbnb-2.svg" class="img-responsive img-square" alt=""/>
 							<span class="img-circle">
 								<i class="https://cdn.worldvectorlogo.com/logos/airbnb-2.svg"></i>
 							</span>
@@ -273,7 +373,7 @@
 					<div class="col-sm-6">
 						<div class="blog-short">
 																									<img src="images/pastries.png" class="img-responsive" alt="" />
-							<h5>Breakfast Pastries on Main St.</h5>
+							<h5>Pastries on Main St.</h5>
 
 																												<p><a href="https://www.yelp.com/biz/maison-villatte-falmouth">Maison Villatte</a>
 																												</br>The best in Mass!</p>
@@ -312,105 +412,6 @@
 		</section>
 
 		<!-- ========== FALMOUTH END ========== -->
-    <!-- ========== LOCATION START ========== -->
-    <section id="location">
-
-
-            <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoRMxiPsqJ9SUuaK1KsCAjd3gqnecjlBw&amp;sensor=true"></script>
-            <script type="text/javascript">
-
-                    function initialize() {
-
-                            // Create an array of styles.
-                            var styles = [
-                              {
-                                "stylers": [
-                                  { "saturation": -100 },
-                                  { "gamma": 1 }
-                                ]
-                              },{
-                                "featureType": "water",
-                                "stylers": [
-                                  { "lightness": -12 }
-                                ]
-                              }
-                            ];
-
-                            // Create a new StyledMapType object, passing it the array of styles,
-                            // as well as the name to be displayed on the map type control.
-                            var styledMap = new google.maps.StyledMapType(styles,
-                            {name: "Styled Map"});
-
-
-                                                    var mapOptions = {
-                                                            scrollwheel: false,
-                                                            zoom: 14,
-                                                            center:
-                                                              new
-                                                              google.maps.LatLng(41.548, -70.63),
-                            mapTypeControlOptions: {
-                              mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-                            }
-                            }
-                            var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-                            //Associate the styled map with the MapTypeId and set it to display.
-                            map.mapTypes.set('map_style', styledMap);
-                            map.setMapTypeId('map_style');
-
-                            setMarkers(map, weddingplaces,'images/map-marker.png' );
-                    }
-
-
-
-                    var weddingplaces = [
-                            ['Spohr Garden.', 41.5426456, -70.644417, 17],
-                            ['Osteria la Civetta', 41.552931, -70.6200862,17],
-                            ['Signell House', 41.5490484, -70.6108836, 17]
-                    ];
-
-                    function setMarkers(map, locations, markerpic) {
-                            // Add markers to the map
-                            var image = {
-                                    url: markerpic,
-                                    // This marker is 42 pixels wide by 68 pixels tall.
-                                    size: new google.maps.Size(21,34),
-                                    // The origin for this image is 0,0.
-                                    //origin: new google.maps.Point(0,0),
-                                    origin: null,
-                                    // The anchor for this image is the base of the pin at 20,42.
-                                    //anchor: new google.maps.Point(20, 42)
-                                    anchor: null
-                            };
-
-                            for (var i = 0; i < locations.length; i++) {
-                                    var place = locations[i];
-                                    var myLatLng = new google.maps.LatLng(place[1], place[2]);
-                                    var marker = new google.maps.Marker({
-                                            position: myLatLng,
-                                            map: map,
-                                            icon: image,
-                                            title: place[0],
-                                            zIndex: place[3],
-                                            animation: google.maps.Animation.DROP
-                                    });
-
-                                    var contentString = "Some content";
-                                    google.maps.event.addListener(marker, "click", function() {
-                                            infowindow.setContent(this.html);
-                                            infowindow.open(map, this);
-                                    });
-                            }
-                    }
-
-                    google.maps.event.addDomListener(window, 'load', initialize);
-            </script>
-
-            <a href="https://drive.google.com/open?id=1eWpPrBMdUVmZ1uk-pEY_3Ps0_OE&usp=sharing">
-            <div id="map-canvas"></div>
-          </a>
-  <!-- ========== LOCATION END ========== -->
-
 
       <!-- ========== RSVP START ========== -->
       <section id="rsvp">
@@ -435,14 +436,10 @@
               </button>
             </a>
 						</div>
-
-
-                              </div>
+          </div>
         </section>
 
-			<!-- ========== RSVP END ========== -->
-
-
+		<!-- ========== RSVP END ========== -->
 
 		<!-- ========== REGISTRY START ========== -->
 
@@ -453,31 +450,7 @@
                                         <h2>Gifts</h2>
                                         <p><span></span><i class="fa fa-heart"></i><span></span></p>
 
-                                        <p>Your presence is the only present
-                                        that we could wish for. We recognize
-                                        the precious energy, time, and money
-                                        you will invest in order to travel to
-                                        our wedding from all corners of the
-                                        nation. For this, we are enormously
-                                        grateful.  Furthermore, we have lived
-                                        together for many years, so we have
-                                        already arranged a comfortable home and
-                                        are very lucky to have no remaining
-                                        material needs.  We value experiences
-                                        and wisdom above all things, so a hug
-                                        when we see you, a kind letter of
-                                        advice, or a speech prepared for our
-                                        wedding will be cherished forever. </p>
-
-                                        <p>If your generosity knows no bounds,
-                                        rest easy.  We are considering an
-                                        adventurous honeymoon and have
-                                        registered online at Honeyfund for
-                                        contributions toward that
-                                        adventure:</p>
-						<div class="item">
-                                                  <a href="http://www.honeyfund.com/wedding/stromandkaty"><button type="button" class="btn btn-default btn-lg">Honeyfund</button></a>
-                                                </div>
+                                        <p>Your presence is presents enough</p>
 
 					</div>
 				</div>
@@ -485,23 +458,6 @@
 		</section>
 
 		<!-- ========== REGISTRY END ========== -->
-
-		<!-- ========== PLAYLIST START ========== -->
-		<!--
-		<section id="playlist" style="background: #f5f4ec;">
-			<div class="container text-center">
-				<div class="row">
-					<div class="col-sm-12 heading" data-scroll-reveal>
-						<h2>The Playlist</h2>
-						<p><span></span><i class="fa fa-heart"></i><span></span></p>
-					</div>
-				</div>
-
-			<iframe src="https://embed.spotify.com/?uri=spotify:user:katyhuff:playlist:1MNn1WSQ0mFtUHFVchy4kw" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
-			</div>
-		</section>
-		-->
-		<!-- ========== PLAYLIST END ========== -->
 
 		<!-- ========== FOOTER START ========== -->
 
