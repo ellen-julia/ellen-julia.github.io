@@ -1,7 +1,7 @@
 ![wedding](/images/wedding_sticker.png?raw=true "Merging")
 
-Strom Borman and Katy Huff are getting married. Katy borrowed this websited source from Justin Grimes. Thanks for keeping stuff open, internet. 
-This website is where you can find info about Katy and Strom's Wedding.
+Katherine Signell and Alex Bucklye are getting married. Katherine's sister Julia borrowed this websited source from Justin Grimes via Katy Huff. 
+This website is where you can find info about Katherine and Alex's Wedding.
 
 
 
