@@ -237,30 +237,30 @@ section {
 	width: 100%;
 }
 
-.katyhuff {
+.kath {
+ width: 370px;
+ height: 370px;
+ display:block;
+	display: inline-block;
+	position: relative;
+ background:transparent url('../images/kath.png') center top no-repeat;
+}
+
+.kath:hover {
+   background-image: url('../images/kath.jpg');
+}
+
+.alex {
  width: 370px;
  height:370px;
  display:block;
 	display: inline-block;
 	position: relative;
- background:transparent url('../images/strom.png') center top no-repeat;
-}
-
-.katyhuff:hover {
-   background-image: url('../images/stromicon.jpg');
-}
-
-.amgallow {
- width: 370px;
- height:370px;
- display:block;
-	display: inline-block;
-	position: relative;
- background:transparent url('../images/katy.png') center top no-repeat;
+ background:transparent url('../images/alex.png') center top no-repeat;
 }
 
 .amgallow:hover {
-   background-image: url('../images/katyicon.png');
+   background-image: url('../images/alex.jpg');
 }
 
 .hover-effect i {
