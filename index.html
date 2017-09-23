@@ -22,7 +22,7 @@
 		<link href="css/countdown.css" rel="stylesheet">
 
 		<!-- Google Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Engagement" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
 
 		<!-- Font Awesome Icons -->
 		<link href="css/font-awesome.min.css" rel="stylesheet">
@@ -48,7 +48,7 @@
 
 			</div>
 			<div class="tint">
-				<div class="welcome text-center" data-scroll-reveal="enter from the top after 2s">
+				<div class="welcome text-center" data-scroll-reveal="enter from the top after 1s">
 					<h1>Ellen &amp; Julia</h1>
 					<p>are getting married</p>
 					<p><span></span> <i class="fa fa-heart"></i><span></span></p>
@@ -79,6 +79,7 @@
 						<li><a href="#accommodation">Accommodation</a></li>
 						<li><a href="#new-hope">New Hope Area</a></li>
 						<li><a href="#rsvp">RSVP</a></li>
+						<li><a href="#no-gifts">No Gifts</a></li>
 					</ul>
 				</div>
 			</div>
@@ -91,33 +92,44 @@
 		<section id="wedding">
 			<div class="container text-center">
 				<div class="row">
+					<!-- <div class="container tiles" style="background-image: url('http://www.lisbonazulejos.com/assets/images/svg/azulejo-28.svg');"></div> -->
+
 					<div class="col-sm-12 heading" data-scroll-reveal>
 						<h2>Wedding Weekend</h2>
-						<p><span></span><i class="fa fa-heart"></i><span></span></p>
 					</div>
 				</div>
-					<div class="col-sm-6">
+					<div class="col-sm-4">
 						<div class="blog-short">
               <img src="images/yardley_meeting.jpg" class="img-responsive" alt="" />
-							<h5>Ceremony</h5>
+							<h3>Ceremony</h3>
               <h6>June 16th, 2018
-							<br/>1:00 PM - 2:00 PM</h6>
+							<br/>2:00 PM - 3:00 PM</h6>
               <p><a href="https://www.google.com/maps/place/Yardley+Friends+Meeting/@40.2477715,-74.8450285,14z/data=!4m13!1m7!3m6!1s0x89c1565bcb45eb9d:0x1fa8c4851904aba!2s65+N+Main+St,+Yardley,+PA+19067!3b1!8m2!3d40.2434709!4d-74.8419907!3m4!1s0x89c1565a4defe113:0x3ae79fe27c76e717!8m2!3d40.2434727!4d-74.8416202?hl=en">Yardley Friends Meeting</a></p>
               <p>65 North Main Street,
               <br/>Yardley, PA</p>
               <p>Ceremony will be inside and seated on pews.</p>
 						</div>
 					</div>
-					<div class="col-sm-6">
+					<div class="col-sm-4">
 						<div class="blog-short">
               <img src="images/bowmans.jpg" class="img-responsive" alt="" />
-              <h5>Reception</h5>
+              <h3>Reception</h3>
               <h6>June 16th, 2018
-              <br/>2:30 PM - 9:00 PM</h6>
+              <br/>3:30 PM</h6>
               <p><a href="https://www.google.com/maps/place/Bowman's+Hill+Wildflower+Preserve/@40.3299317,-74.9413652,17z/data=!4m13!1m7!3m6!1s0x89c3ff0a176f170b:0x1f8441c5d3d1c2d5!2s1635+River+Rd,+New+Hope,+PA+18938!3b1!8m2!3d40.3299317!4d-74.9391765!3m4!1s0x89c3ff0a176f170b:0xe7de20cbe67645e3!8m2!3d40.331366!4d-74.939198">Bowman's Hill Wildflower Preserve</a></p>
               <p>1635 River Rd
 							</br>New Hope, PA
               <p>A casual late lunch/early dinner will be served.</p>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="blog-short">
+              <img src="images/donuts.jpg" class="img-responsive" alt="" />
+              <h3>Breakfast</h3>
+              <h6>June 17th, 2018
+              <br/>10:00 AM</h6>
+							<p><a href="https://video.nest.com/live/YLErV2YOkh" >Location TBD</a>
+              <p>Probably donuts will be made available somewhere.</p>
 						</div>
 					</div>
 				</div>
@@ -127,7 +139,7 @@
 		<!-- ========== WEDDING END ========== -->
 
 		<!-- ========== LOCATION START ========== -->
-		<!-- <section id="location">
+		<section id="location">
 			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYTjkbvCA1mPx_n6l3NBGkpwkXRAXb348"></script>
 			<script type="text/javascript">
 							function initialize() {
@@ -154,10 +166,10 @@
 
 											var mapOptions = {
 															scrollwheel: false,
-															zoom: 14,
+															zoom: 12,
 															center:
 																new
-																google.maps.LatLng(41.548, -70.63),
+																google.maps.LatLng(40.3, -74.9),
 											mapTypeControlOptions: {
 												mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
 											}
@@ -165,11 +177,11 @@
 											var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 											var mq = window.matchMedia( "(max-width: 768px)" );
 											if (mq.matches) {
-											    map.setZoom(13);
+											    map.setZoom(11);
 											}
 											var min = window.matchMedia( "(min-width: 1000px)" );
 											if (min.matches) {
-											    map.setZoom(15);
+											    map.setZoom(12);
 											}
 
 											//Associate the styled map with the MapTypeId and set it to display.
@@ -180,9 +192,8 @@
 							};
 
 							var weddingplaces = [
-											['Spohr Garden.', 41.54275, -70.64136, 21],
-											['Osteria la Civetta', 41.5529, -70.61789, 21],
-											['Signell House', 41.54904, -70.60868, 21]
+								["Yardley Friends Meeting House", 40.2434768, -74.8438142, 21],
+								["Bowman's Hill WildFlower Preserve", 40.3313701, -74.941392, 21]
 							];
 
 							function setMarkers(map, locations, markerpic) {
@@ -222,12 +233,8 @@
 							google.maps.event.addDomListener(window, 'load', initialize);
 			</script>
 		<div id="map-canvas"></div>
-<<<<<<< HEAD
+		  <!-- <a href="https://drive.google.com/open?id=1eWpPrBMdUVmZ1uk-pEY_3Ps0_OE&usp=sharing">Go to GoogleMaps</a> -->
 	  </section>
-=======
-		  <a href="https://drive.google.com/open?id=1eWpPrBMdUVmZ1uk-pEY_3Ps0_OE&usp=sharing">Go to GoogleMaps</a>
-	  </section> -->
->>>>>>> gh-pages
 		<!-- ========== LOCATION END ========== -->
 
 		<!-- ========== ACOOMMODATION START ========== -->
@@ -296,29 +303,9 @@
 		</section> -->
 
 		<!-- ========== ACCOMMODATION END ========== -->
-		<!-- ========== RSVP START ========== -->
-		<!-- <section id="rsvp">
-		<div class="container text-center">
-			<div class="row">
-				<div class="col-sm-12 heading" data-scroll-reveal>
-																			<h2>RSVP</h2>
-																			<p><span></span><i class="fa fa-heart"></i><span></span></p>
-															</div>
-															<h5>Please fill out the form below</h5>
-					<div class="item">
-					<a href="https://docs.google.com/forms/d/e/1FAIpQLSczcZ6NwJD0EDX5C5iCZbCfD7WtWlLtBrNYHmdKMwddM3PpZg/viewform">
-						<button type="button" class="btn btn-default btn-lg">
-							<span></span>Go To The Form
-						</button>
-					</a>
-					</div>
-				</div>
-			</section> -->
-
-	<!-- ========== RSVP END ========== -->
 
 		<!-- ========== FALMOUTH START ========== -->
-		<!-- <section id="falmouth">
+		<!-- <section id="quaker">
 			<div class="container text-center">
 				<div class="row">
 					<div class="col-sm-12 heading" data-scroll-reveal>
@@ -371,13 +358,117 @@
 
 		<!-- ========== FALMOUTH END ========== -->
 
+    <!-- ========== QUAKER START ========== -->
+
+		<section id="quaker">
+			<div class="container text-center">
+				<div class="row">
+					<div class="col-sm-12 heading" data-scroll-reveal>
+						<h2>Quaker Ceremony</h2>
+						<p><span></span><i class="fa fa-heart"></i><span></span></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-14">
+						<div class="blog-short text-left">
+
+							<p>
+								The wedding, held during a worship meeting, begins in silent worship until
+								Ellen and Julia rise to say their vows. Then Ellen and Julia sign a Quaker
+								marriage certificate and sit down while it is read aloud. The group returns
+								to silent worship from which all are welcome to share as they are moved in
+								the moment, leaving a period of silence for reflection between messages.
+							</p>
+							<p>
+								Messages are usually quite diverse; they can be silly or serious - poems,
+								stories of times we've shared together, or hopes and wishes for the future.
+								Messages are typically <b>unprepared</b> and spoken from the heart as we are
+								gathered together at the wedding. The meeting ends with a handshake and
+								everyone signing the certificate as witnesses.
+							</p>
+							<p>
+								<b>Children</b> are very welcome
+								at the ceremony. If an hour of Quaker meeting seems like a challenge,
+								there are indoor and outdoor spaces to play.
+							</p>
+
+    					<p>
+								Read more about Quaker meeting for worship
+								<a href="https://www.fgcquaker.org/resources/silent-worship-and-quaker-values">
+									here
+								</a>.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+    <!-- ========== QUAKER END ========== -->
+
+		<!-- ========== RSVP START ========== -->
+		<section id="rsvp">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-sm-12 heading" data-scroll-reveal>
+					<h2>RSVP</h2>
+					<p><span></span><i class="fa fa-heart"></i><span></span></p>
+				</div>
+				<h5>Please fill out the form below</h5>
+					<div class="item">
+					<a href="https://docs.google.com/forms/d/e/1FAIpQLScFvezcOBcacw1guYrlaVoK6Zoksldy86MX3oreAETLJpCVHQ/viewform">
+						<button type="button" class="btn btn-default btn-lg">
+							<span></span>Go To The Form
+						</button>
+					</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ========== RSVP END ========== -->
+
+		<!-- ========== NO GIFTS START ========== -->
+
+		<section id="no-gifts">
+			<div class="container text-center">
+				<div class="row">
+					<div class="col-sm-12 heading" data-scroll-reveal>
+						<h2>No Gifts</h2>
+						<p><span></span><i class="fa fa-heart"></i><span></span></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-14">
+						<div class="blog-short text-left">
+
+							<p>
+								Your presence is the only present that we could wish for.
+								We recognize that traveling to the wedding represents significant
+								energy, time, and money for many of our family members and friends.
+								For this, we are enormously grateful. Furthermore, we have lived
+								together for several years, so we are lucky to already have a comfortable
+								home and no remaining material needs. We value love and experiences
+								above all things, so a hug when we see you, a message during the
+								ceremony, or a letter of advice would be the most special presents.
+							</p>
+							<p>
+								In the event of extreme generosity, we're considering a honeymoon -
+								possibly to Sardegna or the Tetons -
+								and would appreciate contributions toward that adventure.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- ========== NO GIFTS END ========== -->
+
 		<!-- ========== FOOTER START ========== -->
 
 		<footer>
 			<div class="container">
 				<div class="row text-center">
-					<div class="col-sm-12" data-scroll-reveal>
-						&copy; 2014 Perfect Couple - Premium Site Theme by <a href="http://themeforest.net/user/Coffeecream/portfolio" target="_blank">Coffeecream Themes</a>
+					<div class="col-sm-8 bottom" data-scroll-reveal>
 					</div>
 				</div>
 			</div>

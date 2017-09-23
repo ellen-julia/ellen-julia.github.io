@@ -27,27 +27,30 @@ body {
 
 h1 {
 	color: #fff;
-	font-family: 'Engagement', cursive;
+	font-family: 'Amatic SC';
 	font-weight: normal;
 	margin: 0;
 }
 
 h2 {
-	font-family: 'Engagement', cursive;
+	font-family: 'Amatic SC';
 	font-weight: normal;
 	margin: 0;
 }
 
 h3,h4,h5{
-	margin: 3em 0;
-	letter-spacing: 0.5em;
-	text-transform: uppercase;
+  font-family: 'Amatic SC';
+	/*margin: 3em 0;*/
+  font-size: 36px;
+  font-weight: normal;
+	letter-spacing: 0.2em;
+	/*text-transform: uppercase;*/
 }
 
 h6 {
 	font-weight: normal;
 	text-transform: uppercase;
-	color: #ecc232;
+	color: #00ccbb;
 }
 
 .x {
@@ -55,7 +58,7 @@ h6 {
 }
 
 a {
-	color: #ecc232;
+	color: #00ccbb;
 }
 
 a,
@@ -85,7 +88,7 @@ img {
 }
 
 section {
-	padding: 80px 0;
+	padding: 50px 0;
 }
 
 .btn {
@@ -201,12 +204,15 @@ section {
 	width: 100%;
 	z-index: 1000;
 }
-
+.navbar-toggle {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
 		padding-top:10px !important;
 		padding-bottom:10px !important;
     background-color: #000;
-		color: #ecc232 !important;
+		color: #00ccbb !important;
 }
 
 .dropdown-menu {
@@ -227,14 +233,23 @@ section {
 
 .heading span {
 	border: 0;
-	border-top: 1px solid #ecc232;
+	border-top: 1px solid #00ccbb;
 	display: inline-block;
 	margin: 5px 10px;
 	width: 40px;
 }
 
 .heading i {
-	color: #ecc232;
+	color: #00ccbb;
+}
+
+/* TILES
+=========================================================================================*/
+
+.tiles {
+  padding: 30px;
+  margin-bottom: 10px;
+  background-size: contain;
 }
 
 /* MAIN BANNER
@@ -250,7 +265,7 @@ section {
 }
 
 .hover-effect span {
-	background: #ecc232;
+	background: #00ccbb;
 	color: #fff;
 	display: block;
 	height: 0;
@@ -299,8 +314,8 @@ section {
 }
 
 .social-icons a:hover {
-	border: 1px solid #ecc232;
-	color: #ecc232;
+	border: 1px solid #00ccbb;
+	color: #00ccbb;
 }
 
 /* EVENTS & BLOG
@@ -341,7 +356,7 @@ section {
 }
 
 .post-header span {
-	color: #ecc232;
+	color: #00ccbb;
 }
 
 .post-meta {
@@ -377,56 +392,6 @@ section {
 	max-width: 25%;
 }
 
-/* FUN FACTS
-=========================================================================================*/
-
-#facts {
-	overflow: hidden;
-	position: relative;
-}
-
-#facts .parallax {
-	background: url(http://placehold.it/1600x1600.jpg);
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	height: 100%;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 100%;
-}
-
-#facts h3 {
-	color: #fff;
-	font-size: 60px;
-	letter-spacing: normal;
-	margin: 0;
-}
-
-#facts h6 {
-	color: #000;
-	margin: 0;
-}
-
-#facts .img-circle {
-	background: #ecc232;
-	height: 213px;
-	padding-top: 60px;
-}
-
-/* GALLERY
-=========================================================================================*/
-
-.gallery {
-	list-style: none;
-	padding: 0;
-}
-
-.gallery li {
-	padding-bottom: 30px;
-}
 
 /* LOCATION
 =========================================================================================*/
@@ -437,7 +402,7 @@ section {
 }
 
 #map-canvas {
-	height: 600px;
+	height: 500px;
 	width: 100%;
 }
 
@@ -445,7 +410,7 @@ section {
 =========================================================================================*/
 
 #rsvp {
-	background: #ecc232;
+	background: #00ccbb;
 	padding: 50px;
 	color: #fff;
 }
@@ -471,36 +436,6 @@ section {
 	padding-bottom: 20px;
 }
 
-/* REGISTRY
-=========================================================================================*/
-
-#registry {
-	padding: 30px 0;
-}
-
-#registry .item {
-	padding: 15px;
-	text-align: center;
-}
-
-#registry .item a {
-	border: 1px solid #ddd;
-	display: block;
-	height: 80px;
-	padding: 15px;
-	position: relative;
-}
-
-#registry .item span {
-	display: inline-block;
-	height: 100%;
-	vertical-align: middle;
-}
-
-#registry .item img {
-	max-height: 50px;
-	vertical-align: middle;
-}
 
 /* FOOTER
 =========================================================================================*/
@@ -508,6 +443,8 @@ section {
 footer {
 	background: #000;
 	padding: 30px 0;
+  background-image: url(http://www.lisbonazulejos.com/assets/images/svg/azulejo-28.svg);
+  background-size: contain;
 }
 
 /* RESPONSIVE STYLES
@@ -519,29 +456,11 @@ footer {
 /* Large devices (large desktops, 1200px and up)
 ----------------------------------------------------------------------------------------*/
 @media (min-width: 1200px) {
-
-	#facts .img-circle {
-		height: 263px;
-		padding-top: 75px;
-	}
-
-	#facts h3 {
-		font-size: 80px;
-	}
 }
 
 /* Medium devices (desktops, 992px and up)
 ----------------------------------------------------------------------------------------*/
 @media (max-width: 991px) {
-
-	#facts .img-circle {
-		height: 158px;
-		padding: 37px 20px 0 20px;
-	}
-
-	#facts h3 {
-		font-size: 50px;
-	}
 }
 
 /* Small devices (tablets, 768px and up)
@@ -571,10 +490,6 @@ footer {
 		display: inline-block;
 		margin: 4px 10px;
 		width: 90px;
-	}
-
-	h1 {
-		font-size: 54px;
 	}
 
 	section {
@@ -625,22 +540,6 @@ footer {
 		font-size: 70% !important;
 		margin: 0 2px !important;
 		padding: 0 0 10px !important;
-	}
-
-
-	#facts .img-circle {
-		height: 120px;
-		margin: 10px auto;
-		padding: 20px 20px 0 20px;
-		width: 120px;
-	}
-
-	#facts h3 {
-		font-size: 40px;
-	}
-
-	#facts h6 {
-		font-size: 12px;
 	}
 
 	#map-canvas {
